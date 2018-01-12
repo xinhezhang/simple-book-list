@@ -36,3 +36,16 @@ function mapStateToProps(state) {
 // connect(function)(component) -> container,
 // which is a component where the state contains in redux
 export default connect(mapStateToProps)(BookList);
+
+
+// How does react/redux connect?
+//
+// Redux generated a state object that contain our "books",
+// and map that state as props to our component,
+// because the state is updated (through reducer),
+// our component re-rendered with that new "BookList"
+
+// What is a "container"?
+//
+// The container is a normal react component that got bounded with the application state
+// Whenever the application state changes, the container will re-render as well
