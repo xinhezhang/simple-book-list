@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
+import { selectBook } from '../actions/index';
+import { bindActionCreators } from 'redux';
+
 class BookList extends Component {
     renderList() {
         return this.props.books.map((book) => {
@@ -33,9 +36,13 @@ function mapStateToProps(state) {
     };
 }
 
+function mapDispatchToProps(dispatch) {
+    return bindActionCreators({ selectBook: selectBook }, dispatch);
+}
+
 // connect(function)(component) -> container,
 // which is a component where the state contains in redux
-export default connect(mapStateToProps)(BookList);
+export default connect(mapStateToProps, mapDispatchToProps)(BookList);
 
 
 // How does react/redux connect?
