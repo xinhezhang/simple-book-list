@@ -1,13 +1,11 @@
 export default function() {
     return (
         [
-            { title: 'Java' },
-            { title: 'C++' },
-            { title: 'Python' },
-            { title: 'HTML' },
-            { title: 'CSS' },
-            { title: 'JavaScript' },
-            { title: 'Matlab' },
+            { title: 'THE PEOPLE VS. ALEX CROSS', author: 'James Patterson' },
+            { title: 'TWO KINDS OF TRUTH', author: 'Michael Connelly' },
+            { title: 'ORIGIN', author: 'Dan Brown' },
+            { title: 'THE WANTED', author: 'Robert Crais' },
+            { title: 'TWISTED', author: 'Helen Hardt' },
         ]
     );
 }
