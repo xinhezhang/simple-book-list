@@ -2,16 +2,16 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
 class BookDetail extends Component {
-    hasAtLeasBook = () => {
-        const defaultText = 'Select a book to get started';
-        return this.props.book ? this.props.book.title : defaultText;
-    }
-
     render() {
+        // validate the data
+        if (!this.props.book) {
+            return <div>Select a book to get started</div>;
+        }
+
         return (
             <div>
                 <h3>Details for:</h3>
-                <div>{this.hasAtLeasBook()}</div>
+                <div>{this.props.book.title}</div>
             </div>
         );
     }
