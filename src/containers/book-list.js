@@ -13,8 +13,6 @@ class BookList extends Component {
     }
 
     render() {
-        console.log(this.props.test); // "200"
-
         return (
             <ul className="list-group col-sm-4">
                 {this.renderList()}
@@ -26,7 +24,6 @@ class BookList extends Component {
 // whatever return by this function will show up as props inside of BookList
 function mapStateToProps(state) {
     return {
-        test: 200,
         books: state.books,
     };
 }
